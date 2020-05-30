@@ -65,6 +65,6 @@ abstract class Resource
      */
     public static function uriKey()
     {
-        return Str::plural(Str::kebab(class_basename(get_called_class())));
+        return Str::of(class_basename(get_called_class()))->kebab()->plural();
     }
 }
